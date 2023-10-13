@@ -1,0 +1,13 @@
+# From Vs Code
+.vscode
+
+# From Vs Python
+__pycache__
+.pytest_cache
+venv
+
+# Environment Variable Files
+.env
+# Generated
+.cache
+.upm
