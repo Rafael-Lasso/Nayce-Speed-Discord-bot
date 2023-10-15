@@ -38,8 +38,29 @@
 ## Ativar o Venv
 O Projeto usa o Ambiente virtual Python para o Desenvolvimento
 
+Para Criar rode o comando no terminal
+
 Para ativar rode o comando no terminal
 
+        python -m venv nome-do-ambiente-virtual
+
+Bibliotecas Usadas
+
+    name: aiohttp                               version: 3.8.6  
+    name: aiosignal                             version: 1.3.1  
+    name: async-timeout                         version: 4.0.3  
+    name: attrs                                 version: 23.1.0 
+    name: charset-normalizer                    version: 3.3.0  
+    name: discord                               version: 2.3.2  
+    name: discord.py                            version: 2.3.2  
+    name: frozenlist                            version: 1.4.0  
+    name: idna                                  version: 3.4    
+    name: multidict                             version: 6.0.4  
+    name: pip                                   version: 23.2.1 
+    name: python-decouple                       version: 3.8    
+    name: python-dotenv                         version: 1.0.0  
+    name: setuptools                            version: 65.5.0 
+   name:  yarl                                  version: 1.9.2 
 
 Windows
 
