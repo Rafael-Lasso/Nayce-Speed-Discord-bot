@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./public/assets/Avatar Nayce enchanted.png" width="200">
+    <img src="./public/assets/project/Avatar Nayce enchanted.png" width="200">
 </div>
 
 ## Nayce Discord

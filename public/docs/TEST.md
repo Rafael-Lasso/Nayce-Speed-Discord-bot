@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="../assets/Avatar Nayce enchanted.png" width="200">
+    <img src="../assets/project/Avatar Nayce enchanted.png" width="200">
 </div>
 
 <br>

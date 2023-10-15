@@ -22,13 +22,16 @@ class Dropdown(discord.ui.Select):
             custom_id="persistent_view:dropdown_help"
         )
 
-        canaisDeDuvida = ["<#1126682150939398204>, <#1158569028604936253>"]
 
     async def callback(self, interaction: discord.Interaction):
+
+        canaisDeDuvida = "<#1126682150939398204>, <#1158569028604936253>"
+        canaisDeSujestao = "<#937685231635431454>, <#1158569028604936253>"
+
         if self.values[0] == "Duvida":
             await interaction.response.send_message(f"Para tirar dúvidas gerais use os canais de suporte comunitário como: {canaisDeDuvida} ", ephemeral=True)
         elif self.values[0] == "Sujestão":
-            await interaction.response.send_message("Para enviar uma sugestão, utilize o chat <#1158126406883086346>", ephemeral=True)
+            await interaction.response.send_message(f"Para enviar uma sugestão, utilize o chat {canaisDeSujestao}", ephemeral=True)
         elif self.values[0] == "Atendimento":
             await interaction.response.send_message("Clique abaixo para criar um ticket", ephemeral=True, view=CreateTicket())
         elif self.values[0] == "Reportar Bug":
@@ -41,16 +44,12 @@ class DropdownView(discord.ui.View):
 
         self.add_item(Dropdown())
 
-    async def setup_hook(self) -> None:
-        self.add_view(DropdownView())
-
-
 class CreateTicket(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=300)
         self.value = None
 
-    @discord.ui.button(label="Abrir Ticket", style=discord.ButtonStyle.blurple, emoji="➕")
+    @discord.ui.button(label="Abrir Ticket", style=discord.ButtonStyle.green, emoji="➕")
     async def confirm(self, interaction: discord.Interaction, button: discord.ui.Button):
         self.value = True
         self.stop()

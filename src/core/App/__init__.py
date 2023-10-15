@@ -1,22 +1,5 @@
-# Librarys
-import os
-import dotenv
-import discord
-from discord import app_commands
-from discord.ext import commands
-from decouple import config
-
-# Modules
-from src.core.Services.Ticket.Ticket import *
-from src.core.Services.Messages.bot_running import *
-
-# Load Environment Variables
-dotenv.load_dotenv(dotenv_path='src\config\.env')
-
-id_do_servidor = os.getenv("ID_SERVER")
-id_cargo_atendente = os.getenv("ID_ATENDENTE")
-token_bot = os.getenv("DISCORD_TOKEN")
-ticketImage = os.getenv("TIKCET_IMAGE_PATH")
+""" Instantiate the application bot  """
+from src.config import *
 
 # Inicia a Instancia do Bot
 class client(discord.Client):
@@ -24,6 +7,10 @@ class client(discord.Client):
     def __init__(self):
         super().__init__(intents=discord.Intents.default())
         self.synced = False
+
+    # Adiciona Persistencia ao Menu Dropdown
+    async def setup_hook(self) -> None:
+        self.add_view(DropdownView())
 
     async def on_ready(self):
         try:
