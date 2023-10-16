@@ -1,4 +1,4 @@
-from ..App import *
+from ...App import *
 
 @tree.command(guild=discord.Object(id=id_do_servidor), name="fecharticket", description='Feche um atendimento atual.')
 async def _fecharticket(interaction: discord.Interaction):

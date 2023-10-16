@@ -1,4 +1,4 @@
-from ..App import *
+from ...App import *
 
 @tree.command(guild=discord.Object(id=id_do_servidor), name='support-menu', description='Setup')
 @commands.has_permissions(manage_guild=True)

@@ -1,4 +1,4 @@
-from ..App import *
+from ...App import *
 import random
 
 @tree.command(guild=discord.Object(id=id_do_servidor), name="cara-ou-coroa", description='Jogue uma moeda para decidir algo')

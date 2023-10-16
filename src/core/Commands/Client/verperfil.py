@@ -1,4 +1,4 @@
-from ..App import *
+from ...App import *
 
 @tree.command(guild=discord.Object(id=id_do_servidor), name="ver-perfil", description='Veja o avatar de algum membro')
 async def verPerfil(interaction: discord.Interaction, member: discord.Member ):

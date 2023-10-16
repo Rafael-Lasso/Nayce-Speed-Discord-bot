@@ -1,4 +1,4 @@
-from ..App import *
+from ...App import *
 
 @tree.command(guild=discord.Object(id=id_do_servidor), name="teste", description='Teste de comando')
 async def test(interaction: discord.Interaction):
